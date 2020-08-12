@@ -2,6 +2,8 @@ package modelos;
 
 import java.util.ArrayList;
 
+//feature envy
+//extract superclass
 public class Ayudante {
     protected Estudiante est;
     public ArrayList<Paralelo> paralelos;

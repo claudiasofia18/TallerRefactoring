@@ -79,6 +79,9 @@ public class Estudiante{
     }
     
     //Calcula y devuelve la nota inicial contando examen, deberes, lecciones y talleres. El teorico y el practico se calcula por parcial.
+    
+    //long parameter list
+    // introduce parameter objects
     public double CalcularNotaInicial(Paralelo p, double nexamen,double ndeberes, double nlecciones, double ntalleres){
         double notaInicial=0;
         for(Paralelo par:paralelos){
@@ -93,6 +96,8 @@ public class Estudiante{
     
     //Calcula y devuelve la nota final contando examen, deberes, lecciones y talleres. El teorico y el practico se calcula por parcial.
     
+    //long parameter list
+    // introduce parameter objects
     public double CalcularNotaFinal(Paralelo p, double nexamen,double ndeberes, double nlecciones, double ntalleres){
         double notaFinal=0;
         for(Paralelo par:paralelos){
@@ -106,6 +111,9 @@ public class Estudiante{
     }
     
     //Calcula y devuelve la nota inicial contando examen, deberes, lecciones y talleres. Esta nota es solo el promedio de las dos calificaciones anteriores.
+    
+    //long parameter list
+    // introduce parameter objects
     public double CalcularNotaTotal(Paralelo p){
         double notaTotal=0;
         for(Paralelo par:paralelos){
