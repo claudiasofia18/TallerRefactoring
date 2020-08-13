@@ -26,5 +26,7 @@ public class Profesor {
         paralelos.add(p);
     }
     
-    
+    public double calcularSueldo(){
+    	return info.aniosdeTrabajo*600 + info.BonoFijo;
+    }
 }

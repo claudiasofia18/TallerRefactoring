@@ -1,11 +1,10 @@
 package modelos;
 
 public class Nota {
-	
-	double nexamen;
-	double ndeberes;
-	double nlecciones;
-	double ntalleres;
+	private double nexamen;
+	private double ndeberes;
+	private double nlecciones;
+	private double ntalleres;
 	
 	
 	public double getNotaExamen() {
@@ -23,39 +22,12 @@ public class Nota {
 	public double getNotaTalleres() {
 		return ntalleres;
 	}
-	
-	
-//Calcula y devuelve la nota inicial contando examen, deberes, lecciones y talleres. El teorico y el practico se calcula por parcial.
-    
-    //long parameter list
-    // introduce parameter objects
-    public double CalcularNotaInicial(Paralelo p, Nota nota){
-        double notaInicial=0;
-        for(Paralelo par:paralelos){
-            if(p.equals(par)){
-                double notaTeorico=(nota.getNotaExamen()+nota.getNotaDeberes()+nota.getNotaLecciones())*0.80;
-                double notaPractico=(nota.getNotaTalleres())*0.20;
-                notaInicial=notaTeorico+notaPractico;
-            }
-        }
-        return notaInicial;
-    }
-    
-    //Calcula y devuelve la nota final contando examen, deberes, lecciones y talleres. El teorico y el practico se calcula por parcial.
-    
-    //long parameter list
-    // introduce parameter objects
-    public double CalcularNotaFinal(Paralelo p, Nota nota){
-        double notaFinal=0;
-        for(Paralelo par:paralelos){
-            if(p.equals(par)){
-            	double notaTeorico=(nota.getNotaExamen()+nota.getNotaDeberes()+nota.getNotaLecciones())*0.80;
-                double notaPractico=(nota.getNotaTalleres())*0.20;
-                notaFinal=notaTeorico+notaPractico;
-            }
-        }
-        return notaFinal;
-    }
+
+	public double calcularNota() {
+		double notaTeorico = nexamen+ndeberes+nlecciones*0.80;
+		double notaPractico = ntalleres*0.20;
+		return notaTeorico+notaPractico;
+	}
 }
 
 

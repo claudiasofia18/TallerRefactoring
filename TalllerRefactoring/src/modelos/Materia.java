@@ -1,5 +1,7 @@
 package modelos;
 
+import java.util.List;
+
 public class Materia {
     public String codigo;
     public String nombre;
@@ -8,17 +10,7 @@ public class Materia {
     public Nota notaFinal;
     public double notaTotal;
     
-    public double CalcularNotaTotal(Paralelo p){
-        double notaTotal=0;
-        for(Paralelo par:paralelos){
-            if(p.equals(par)){
-                notaTotal=(p.getMateria().notaInicial+p.getMateria().notaFinal)/2;
-                
-            }
-        }
-        return notaTotal;
-        
-    }
-    
-    
+    public double calcularNotaTotal() {
+    	return (notaInicial.calcularNota()+notaFinal.calcularNota())/2;
+    } 
 }

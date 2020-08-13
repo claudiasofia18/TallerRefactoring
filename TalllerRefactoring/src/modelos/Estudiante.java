@@ -3,7 +3,6 @@ package modelos;
 import java.util.ArrayList;
 
 public class Estudiante{
-    //Informacion del estudiante
     public String matricula;
     public String nombre;
     public String apellido;
@@ -78,15 +77,36 @@ public class Estudiante{
         this.telefono = telefono;
     }
     
+    public double calcularNotaInicial(Paralelo p, Nota nota){
+        double notaInicial=0;
+        for(Paralelo par:paralelos){
+            if(p.equals(par)){
+                notaInicial = nota.calcularNota();
+            }
+        }
+        return notaInicial;
+    }
     
+    public double calcularNotaFinal(Paralelo p, Nota nota){
+        double notaFinal=0;
+        for(Paralelo par:paralelos){
+            if(p.equals(par)){
+            	notaFinal = nota.calcularNota();
+            }
+        }
+        return notaFinal;
+    }
     
-    
-    
-    
-    
-    
-    
-    
+    public double calcularNotaTotal(Paralelo p){
+        double notaTotal = 0;
+        for(Paralelo par:paralelos){
+            if(p.equals(par)){
+                notaTotal = p.getMateria().calcularNotaTotal();    
+            }
+        }
+        return notaTotal;
+        
+    }
 }
         
     
