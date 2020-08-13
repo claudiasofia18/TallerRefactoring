@@ -78,23 +78,21 @@ public class Estudiante{
     }
     
     public double calcularNotaInicial(Paralelo p, Nota nota){
-        double notaInicial=0;
-        for(Paralelo par:paralelos){
-            if(p.equals(par)){
-                notaInicial = nota.calcularNota();
-            }
-        }
-        return notaInicial;
+        return calcularPuntaje(p,nota);
     }
     
     public double calcularNotaFinal(Paralelo p, Nota nota){
-        double notaFinal=0;
+        return calcularPuntaje(p,nota);
+    }
+    
+    public double calcularPuntaje(Paralelo p, Nota nota) {
+        double puntaje=0;
         for(Paralelo par:paralelos){
             if(p.equals(par)){
-            	notaFinal = nota.calcularNota();
+            	puntaje = nota.calcularNota();
             }
         }
-        return notaFinal;
+        return puntaje;
     }
     
     public double calcularNotaTotal(Paralelo p){
